@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<link href="css/style.css" rel="stylesheet" id="main-css">
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<title>Gmail</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+         <center><img src="https://ssl.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_112x36dp.png" style="width:116px;height: 38px;"></center>
+           <center><h1>One account. All of Google.</h1></center>
+           <div class="hiddensmall"><center><h2>Sign in to continue to Gmail</h2></center></div>
+            <div class="account-wall">
+                <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                    alt="">
+                <form class="form-signin">
+                 <div class="login.modal-container" ng-app="myApp" ng-controller="myCtrl"></div>
+                <center><input type="text"  class="form-control" ng-model="name" placeholder="Email or phone" ></center>                
+                <center><input type="password" class="form-control" ng-model="pass" placeholder="Password"></center>
+                <center><button ng-click="login()" type="submit" class="loginmodal-submit" >Sign in</button></center>
+                 <center><a href="https://accounts.google.com/signin/usernamerecovery?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&ss=1&scc=1&rm=false&osid=1&hl=en" class="pull-right need-help">Need help? </a><span class="clearfix"></span></center>
+                </form>
+                <center><a href="https://accounts.google.com/SignUp?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ltmpl=default" class="text-center new-account">Create an account </a></center>
+
+            </div>
+            
+            <script>
+              def is_password_correct(user, password_attempt):
+                       return sha1(password_attempt) == user["mounika"]
+
+               var app = angular.module('myApp', []);
+               app.controller('myCtrl', function($scope) {
+    
+               $scope.login= function() {
+                 if($scope.name === 'mounika@gmail.com' && $scope.pass === 'mounika'){
+                 window.location ="https://mounika894.wordpress.com/"
+                 }
+                else{
+                   alert("Invalid Email or password");
+                };   
+               }     
+
+              });   
+            </script>
+         
+
+   </div>
+        
+     </div>
+        </div>
+</body>
+</html>

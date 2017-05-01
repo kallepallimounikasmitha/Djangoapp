@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+     </head>
+    <body>
+        <div>
+            <h1><a href="https://google.com">Django Girls Blog</a></h1>
+        </div>
+
+{% for post in object_list %}
+        <h1>Title:<a href="https://google.com">{{ post.title }}</a></h1>
+        <p>Text:{{ post.text }}</p>
+<p>Created date:{{ post.created_date }}</p>
+{% endfor %}
+    </body>
+</html>
+
+
+
+
